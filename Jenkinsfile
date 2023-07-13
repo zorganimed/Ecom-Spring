@@ -15,11 +15,6 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage('Create Dockerimage'){
-            steps{
-                sh 'docker build -t ecom-jenkins-image .'
-            }
-        }
         
     }
     

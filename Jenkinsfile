@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    tools{
+        maven 'MyMaven'
+        jdk 'MyJDK'
+    }
     stages{
         stage('Git clone'){
             steps{
@@ -8,12 +12,17 @@ pipeline{
         }
         stage('Test'){
             steps{
-                echo "Testing completed"
+                sh 'mvn test'
             }
         }
         stage('Build'){
             steps{
-                echo "Building completed"
+                sh 'mvn package'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo "deploy completed"
             }
         }
     }

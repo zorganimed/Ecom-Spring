@@ -10,6 +10,11 @@ pipeline{
                 git 'https://github.com/zorganimed/Ecom-Spring.git'
             }
         }
+        stage('Build'){
+            steps{
+                sh 'mvn package'
+            }
+        }
         stage('Create Dockerimage'){
             steps{
                 sh 'docker build -t ecom-jenkins-image .'

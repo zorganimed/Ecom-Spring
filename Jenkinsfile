@@ -17,7 +17,7 @@ pipeline{
         }
         stage('Create Dockerimage'){
             steps{
-                sh 'docker build -t ecom-jenkins-image .'
+                sh 'docker build -t ecom-jenkins-image-mi .'
             }
         }
         

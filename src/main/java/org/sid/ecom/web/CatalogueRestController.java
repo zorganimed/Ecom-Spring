@@ -24,6 +24,8 @@ public class CatalogueRestController {
     @GetMapping(path="/photoProduct/{id}",produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] getPhoto(@PathVariable("id") Long id) throws Exception{
         Product p = productRepository.findById(id).get();
+
+        
         return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/ecom/products/"+p.getPhotoName()));
 
     }

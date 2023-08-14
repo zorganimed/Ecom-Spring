@@ -19,6 +19,7 @@ public class CatalogueRestController {
     public CatalogueRestController(ProductRepository productRepository) {
         this.productRepository = productRepository;
 
+        
     }
 
     @GetMapping(path="/photoProduct/{id}",produces = MediaType.IMAGE_PNG_VALUE)

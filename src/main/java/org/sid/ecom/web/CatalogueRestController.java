@@ -15,8 +15,7 @@ public class CatalogueRestController {
 
     private ProductRepository productRepository;
 
-    public CatalogueRestController(ProductRepository productRepository) {
-        
+    public CatalogueRestController(ProductRepository productRepository) {        
         this.productRepository = productRepository;        
     }
 
